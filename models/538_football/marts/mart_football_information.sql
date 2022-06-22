@@ -22,3 +22,5 @@ with
       qryRankings as team_two on
         (qryMatches.team2 = team_two.name)
   )
+
+select * from qryFinal
