@@ -3,7 +3,7 @@ soccer_538:
     outputs:
         dev:
           type: databricks
-          schema: default
+          schema: dbt
           host: dbc-4bb5e1ff-5d09.cloud.databricks.com
           http_path: /sql/protocolv1/o/1225776382380501/0621-204607-nltlvtgs
           token: dapid0de699a632bc15cc1b7d06a383365ff
