@@ -1,9 +1,9 @@
 with
   qryMatches as (
-    SELECT * FROM ref(('stg_football_matches'))
+    SELECT * FROM {{ ref('stg_football_matches') }} where league = 'Barclays Premier League'
     ),
   qryRankings as (
-    SELECT * FROM ref(('stg_football_rankings'))
+    SELECT * FROM {{ ref('stg_football_rankings') }} where league = 'Barclays Premier League'
   ),
 
   qryFinal as (
@@ -22,5 +22,3 @@ with
       qryRankings as team_two on
         (qryMatches.team2 = team_two.name)
   )
-
-select * from qryFinal
